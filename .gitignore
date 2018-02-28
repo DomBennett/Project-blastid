@@ -1,6 +1,7 @@
 # Data
 *.fa
 *.fasta
+data/
 
 # History files
 .Rhistory
