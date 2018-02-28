@@ -1,15 +1,15 @@
-chck <- function(nm) {
-  fls <- list.files('cache')
+chck <- function(nm, sbfl) {
+  fls <- list.files(file.path('cache', sbfl))
   nms <- sub('\\.RData', '', fls)
   nm %in% nms
 }
 
-svObj <- function(nm, obj) {
-  fl <- file.path('cache', paste0(nm, '.RData'))
+svObj <- function(nm, obj, sbfl) {
+  fl <- file.path('cache', sbfl, paste0(nm, '.RData'))
   saveRDS(object=obj, file=fl)
 }
 
-ldObj <- function(nm) {
-  fl <- file.path('cache', paste0(nm, '.RData'))
+ldObj <- function(nm, sbfl) {
+  fl <- file.path('cache', sbfl, paste0(nm, '.RData'))
   readRDS(fl)
 }

@@ -1,3 +1,7 @@
+# Data
+*.fa
+*.fasta
+
 # History files
 .Rhistory
 .Rapp.history
